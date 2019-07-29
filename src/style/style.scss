@@ -22,30 +22,65 @@ $shadow-color: #aaa;
 
 //---- styles ----
 * {
-	font-family: serif;	
-	// font-size: 1rem;
+	font-family: inherit;
 }
 
 html {
 	background-color: $white;
 	color: $black;
-}
-
-h1, h2 {
-	font-family: "Khula";
+	font-family: $sans-serif;
 }
 
 h1 {
 	font-size: 3rem;
 }
 
+h2 {
+	font-size: 1.1rem;
+	color: $mid-grey;
+	font-weight: 400;
+}
+
+.high-score .display {
+	font-family: $mono;
+}
+
+button {
+	font-size: 1.125rem;
+	word-break: break-word;
+}
+
 //---- layout ----
 
 html {
-	height: auto;
+	height: 100vw;
 	width: 100vw;
 }
 
 main {
 	padding: 1.5rem;
+
+	h2 {
+		display: block;
+		text-align: center;
+	}
+
+	.game-controller {
+		margin: 1rem auto;
+		padding: 1rem 0.5rem;
+		text-align: center;
+
+		span {
+			display: block;
+			margin: 1rem 0;
+			text-align: center;
+		}
+
+		button {
+			display: block;
+			margin: 0 auto;
+			padding: 1rem;
+			text-align: center;
+		}
+	}
 }

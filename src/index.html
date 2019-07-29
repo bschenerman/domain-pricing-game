@@ -4,14 +4,49 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=7">
-	<title>Gulpfile Template</title>
+	<title>Domain Pricing Game</title>
 	<link rel="stylesheet" type="text/css" href="./css/main.min.css">
 </head>
 <body>
 	<main>
-		<h1>Hello.</h1>
-		<h3>This is Ben's Gulp Template.</h3>
+		<h2 class="prompt">Which is more expensive?</h2>
+
+		<!-- states: flick, start, or end -->
+		<div class="game-controller start"> 
+			<button class="domain top" id="domain-top" name="domain-top"><label for="domain-top">fieretti.com</label></button>
+			<span class="btn-div">or</span>
+			<button class="domain bottom" id="domain-bottom" name="domain-bottom"><label for="domain-bottom">abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijkl.com</label></button>
+		</div>
+
+		<!-- states: initial, new-high-score -->
+		<div class="high-score high-score-inline initial">
+
+			<div class="global">
+				<h4>High Score</h4>
+				<div class="display">
+					<span class="username">ARD</span>
+					<div class="score">
+						<span class="correct">38</span>/<span class="total-questions">50</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="local">
+				<h4>Current Score</h4>
+				<div class="display">
+					<span class="username">you</span>
+					<div class="score">
+						<span class="correct">11</span>/<span class="total-questions">17</span>
+					</div>
+				</div>
+			</div>
+
+		</div>		
 	</main>	
+
+	<footer>
+		<button class="full-width">View High Scores</button>
+	</footer>
 	
 	<script type="text/javascript" src="./js/main.min.js"></script>
 </body>

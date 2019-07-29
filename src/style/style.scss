@@ -1,0 +1,51 @@
+@import 'reset';
+@import 'fonts';
+
+//---- breakpoints ----
+$mobile-w: 30rem;
+$tablet-w: 48rem;
+
+//---- colors ----
+$brand: #97E3DE;
+$secondary-dark: #193E5E;
+$secondary-light: #3AA5DB;
+$error: #FF6A6A;
+
+$black: #231F20;
+$mid-grey: #898989;
+$light-grey: #ededed;
+$off-white: #f0f0f0;
+$white: #fafafa;
+
+$shadow-color: #aaa;
+
+
+//---- styles ----
+* {
+	font-family: serif;	
+	// font-size: 1rem;
+}
+
+html {
+	background-color: $white;
+	color: $black;
+}
+
+h1, h2 {
+	font-family: "Khula";
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+//---- layout ----
+
+html {
+	height: auto;
+	width: 100vw;
+}
+
+main {
+	padding: 1.5rem;
+}

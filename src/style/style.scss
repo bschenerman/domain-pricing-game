@@ -12,7 +12,7 @@ $secondary-light: #3AA5DB;
 $error: #FF6A6A;
 
 $black: #231F20;
-$mid-grey: #898989;
+$mid-grey: #727272;
 $light-grey: #ededed;
 $off-white: #f0f0f0;
 $white: #fafafa;
@@ -41,14 +41,47 @@ h2 {
 	font-weight: 400;
 }
 
-.high-score .display {
-	font-family: $mono;
+span.btn-div {
+	color: $mid-grey;
 }
 
-button {
-	font-size: 1.125rem;
-	word-break: break-word;
+.game-controller {
+	button {
+		font-size: 1.125rem;
+		word-break: break-word;
+	}
+
+	span.price {
+		font-weight: 700;
+		text-align: right;
+	}
 }
+
+
+
+
+
+.high-score {
+	.display {
+		background-color: $light-grey;
+		font-family: $mono;
+	}
+
+	h4 {
+		font-weight: 400;
+	}
+
+	.score .correct {
+		font-weight: 600;
+	}
+}
+
+footer button {
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+
 
 //---- layout ----
 
@@ -58,7 +91,13 @@ html {
 }
 
 main {
-	padding: 1.5rem;
+	padding: 1rem;
+
+	div#loading {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 
 	h2 {
 		display: block;
@@ -81,6 +120,71 @@ main {
 			margin: 0 auto;
 			padding: 1rem;
 			text-align: center;
+			min-width: 100%;
+			min-height: 6.3rem;
 		}
+	}
+
+	.game-controller.end {
+
+		button {
+			min-height: 0;
+			max-height: 4rem;
+
+			label {
+				overflow: hidden;
+			}
+		}
+
+		span.price {
+			float: right;
+		}
+
+		span.price.price-top {
+			margin-top: 0;
+		}
+
+		span.price.price-bottom {
+			margin-bottom: 0;
+		}
+	}
+
+	.high-score-inline {
+		display: flex;
+		margin: 0 auto;
+		text-align: center;
+
+		.container {
+			display: inline-block;
+			margin: 0 0.5rem;
+			width: 50%;
+
+			.display {
+				margin-top: 0.25rem;
+				padding: 0.75rem 0.75rem;
+
+				span.username {
+					text-align: left;
+					float: left;
+				}
+
+				.score {
+					text-align: right;
+					// float: right;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	width: 100vw;
+
+	button {
+		position: absolute;
+		bottom: 0;
+		padding: 0.5rem 0;
+		text-align: center;
+		width: 100vw;
 	}
 }

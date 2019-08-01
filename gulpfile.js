@@ -36,7 +36,7 @@ gulp.task('js', () => {
 		.pipe(babel({
 			presets: ['env']
 		}))
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./build/js'));
 });

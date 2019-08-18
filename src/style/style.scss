@@ -11,6 +11,9 @@ $secondary-dark: #193E5E;
 $secondary-light: #3AA5DB;
 $error: #FF6A6A;
 
+$correct: #30AA2F;
+$incorrect: #cc2d35;
+
 $black: #231F20;
 $mid-grey: #727272;
 $light-grey: #ededed;
@@ -29,6 +32,26 @@ html {
 	background-color: $white;
 	color: $black;
 	font-family: $sans-serif;
+}
+
+button {
+	background-color: $off-white;
+	border: 0;
+	box-shadow: 0px 2px 4px rgba(141, 141, 141, 0.5);
+	cursor: pointer;
+	outline: none;
+	transition: 195ms box-shadow ease-in-out, 119ms background-color ease-out;
+	* {
+		cursor: pointer;
+	}
+}
+
+button:hover, button:focus {
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+	background-color: #ccc;
 }
 
 h1 {
@@ -56,9 +79,6 @@ span.btn-div {
 		text-align: right;
 	}
 }
-
-
-
 
 
 .high-score {
@@ -93,6 +113,11 @@ html {
 main {
 	padding: 1rem;
 
+	div.spacer{
+		display: block;
+		height: 1px;
+	}
+
 	div#loading {
 		position: absolute;
 		top: 0;
@@ -109,10 +134,15 @@ main {
 		padding: 1rem 0.5rem;
 		text-align: center;
 
-		span {
+		span.btn-div {
 			display: block;
 			margin: 1rem 0;
 			text-align: center;
+		}
+
+		span.response, span.price {
+			display: none;
+			margin: 1rem 0;
 		}
 
 		button {
@@ -128,24 +158,90 @@ main {
 	.game-controller.end {
 
 		button {
+			box-shadow: none;
+			cursor: not-allowed;
 			min-height: 0;
 			max-height: 4rem;
 
 			label {
+				cursor: not-allowed;
 				overflow: hidden;
 			}
 		}
+
+		button:focus, button:hover {
+			box-shadow: none;
+		}
+
+		button:active {
+			background-color: $off-white;
+		}
+
+		button.correct {
+			// box-shadow: 0px 2px 4px $correct;
+			background-color: $correct;
+			color: $white
+		}
+
+		button.incorrect {
+			// box-shadow: 0px 2px 4px $incorrect;
+			background-color: $incorrect;
+			// color: #A2A2A2;
+			color: $white
+		}
+
+		span.response, span.price {
+			display: inline-block;
+		}
+
+		span.response {
+			float: left;
+
+			img {
+				height: 1rem;
+				margin-right: 1rem;
+				width: auto;
+			}
+		}		
 
 		span.price {
 			float: right;
 		}
 
-		span.price.price-top {
+		span.price-top, span.response-top {
 			margin-top: 0;
 		}
 
-		span.price.price-bottom {
+		span.price-bottom span.response-bottom {
 			margin-bottom: 0;
+		}
+
+		span.price.incorrect {
+			color: #A2A2A2;
+		}
+
+		span.price.correct {
+			color: $correct;
+		}
+	}
+
+	.next-question {
+		display: none;
+	}
+
+	.next-question.end {
+		display: block;
+		margin: 2rem auto;
+		
+		button {
+			margin-left: -1rem;
+			padding: 0.75rem;
+			width: 100vw;
+		}
+
+		label {
+			font-size: 1.45rem;
+			margin: 0 auto;
 		}
 	}
 

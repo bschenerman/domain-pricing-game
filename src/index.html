@@ -20,17 +20,26 @@
 
 		<!-- states: flick, start, or end -->
 		<div class="game-controller start">
+			<span class="response response-top"></span>
 			<span class="price price-top"></span>
 			<button class="domain top" id="domain-top" name="domain-top" onclick="clickTop();"><label
 					for="domain-top"></label></button>
 			<span class="btn-div">or</span>
 			<button class="domain bottom" id="domain-bottom" name="domain-bottom" onclick="clickBot();"><label
 					for="domain-bottom"></label></button>
+			<span class="response response-bottom"></span>
 			<span class="price price-bottom"></span>
 		</div>
 
 		<div id="result">
 			<div id="resultText"></div>
+		</div>
+
+		<div class="spacer"></div>
+
+		<!-- states: start, or end -->
+		<div class="next-question start">
+			<button id="next-question"><label for="next-question">Next Question</label></button>
 		</div>
 
 		<!-- states: initial, new-high-score -->
@@ -51,7 +60,7 @@
 				<div class="display">
 					<span class="username">you</span>
 					<div class="score">
-						<span class="correct">11</span>/<span class="total-questions">17</span>
+						<span class="correct">0</span>/<span class="total-questions">0</span>
 					</div>
 				</div>
 			</div>

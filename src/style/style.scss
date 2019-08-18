@@ -106,12 +106,14 @@ footer button {
 //---- layout ----
 
 html {
-	height: 100vw;
+	height: auto;
 	width: 100vw;
 }
 
 main {
 	padding: 1rem;
+	margin: 0 auto;
+	max-width: 500px;
 
 	div.spacer{
 		display: block;
@@ -133,6 +135,10 @@ main {
 		margin: 1rem auto;
 		padding: 1rem 0.5rem;
 		text-align: center;
+
+		@media screen and (min-width: $mobile-w ) {
+			padding: 1rem 1.5rem;
+		}
 
 		span.btn-div {
 			display: block;
@@ -237,6 +243,11 @@ main {
 			margin-left: -1rem;
 			padding: 0.75rem;
 			width: 100vw;
+
+			@media screen and (min-width: $mobile-w ) {
+				margin-left: 0;
+				width: 100%;
+			}
 		}
 
 		label {
@@ -254,6 +265,10 @@ main {
 			display: inline-block;
 			margin: 0 0.5rem;
 			width: 50%;
+
+			@media screen and (min-width: $mobile-w ) {
+				margin: 0rem 1.5rem;
+			}
 
 			.display {
 				margin-top: 0.25rem;
@@ -281,6 +296,17 @@ footer {
 		bottom: 0;
 		padding: 0.5rem 0;
 		text-align: center;
+		transition: 195ms padding ease-in-out, 195ms box-shadow ease-in-out, 119ms background-color ease-out;
 		width: 100vw;
+
+		@media screen and (min-width: $mobile-w ) {
+			padding: 1.5rem 0;
+		}
+	}
+
+	button:hover, button:focus {
+		@media screen and (min-width: $mobile-w ) {
+			padding: 2rem 0;
+		}
 	}
 }

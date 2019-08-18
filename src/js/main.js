@@ -200,8 +200,6 @@ function showResult(correct, button) {
 		startNewRound();
 	}, false);
 
-	nextQuestionEl.focus();
-
 	responseTopEl.show();
 	responseBotEl.show();
 
@@ -220,7 +218,6 @@ showLoading();
 function showLoading() {
 	state = 'loading';
 	loadingEl.show();
-	// gameController.hide();
 	var xmlhttp = new XMLHttpRequest();
 
 	xmlhttp.onreadystatechange = function () {

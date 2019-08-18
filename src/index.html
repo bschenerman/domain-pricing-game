@@ -22,10 +22,10 @@
 		<div class="game-controller start">
 			<span class="response response-top"></span>
 			<span class="price price-top"></span>
-			<button class="domain top" id="domain-top" name="domain-top" onclick="clickTop();"><label
+			<button class="domain top" id="domain-top" name="domain-top" tabindex="0" onclick="clickTop();"><label
 					for="domain-top"></label></button>
 			<span class="btn-div">or</span>
-			<button class="domain bottom" id="domain-bottom" name="domain-bottom" onclick="clickBot();"><label
+			<button class="domain bottom" id="domain-bottom" name="domain-bottom" tabindex="0" onclick="clickBot();"><label
 					for="domain-bottom"></label></button>
 			<span class="response response-bottom"></span>
 			<span class="price price-bottom"></span>
@@ -39,7 +39,7 @@
 
 		<!-- states: start, or end -->
 		<div class="next-question start">
-			<button id="next-question"><label for="next-question">Next Question</label></button>
+			<button id="next-question" tabindex="0"><label for="next-question">Next Question</label></button>
 		</div>
 
 		<!-- states: initial, new-high-score -->
@@ -48,7 +48,7 @@
 			<div class="container global">
 				<h4>High Score</h4>
 				<div class="display">
-					<span class="username">ARD</span>
+					<span class="username">BJS</span>
 					<div class="score">
 						<span class="correct">38</span>/<span class="total-questions">50</span>
 					</div>
@@ -69,7 +69,7 @@
 	</main>
 
 	<footer>
-		<button class="full-width">View High Scores</button>
+		<button class="full-width" tabindex="0">View High Scores</button>
 	</footer>
 
 	<script type="text/javascript" src="./js/main.min.js"></script>
